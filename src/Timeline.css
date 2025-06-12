@@ -1,0 +1,93 @@
+.circle {
+    text-align: left;
+}
+
+.id-text {
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    position: relative;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+.link-to-next {
+
+}
+
+.link-to-next::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    height: 60px;
+    left: 17px;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.padding-text {
+    padding-left: 20px;
+}
+
+.realized {
+    background-color: rgb(123, 155, 168);
+}
+
+ .list-view,
+        .detail-view {
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        /* Slide left fade out (list going left) */
+        .slide-left-fade-out {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+
+        /* Slide right fade out (detail going right) */
+        .slide-right-fade-out {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+
+        /* Slide left fade in (detail coming in from right) */
+        .slide-left-fade-in {
+          opacity: 1;
+          transform: translateX(0);
+          animation: slideInFromRight 0.5s forwards;
+        }
+
+        /* Slide right fade in (list coming in from left) */
+        .slide-right-fade {
+          opacity: 1;
+          transform: translateX(0);
+          animation: slideInFromLeft 0.5s forwards;
+        }
+
+        @keyframes slideInFromRight {
+          from {
+            opacity: 0;
+            transform: translateX(100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInFromLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
